@@ -14,18 +14,18 @@
     <style>
         /* Custom styles for gradients and animations */
         :root {
-            --bg-color: #0f172a;
+            --bg-color: #0d121c;
             --text-color: #e2e8f0;
-            --primary-color: #6366f1;
-            --secondary-color: #a5b4fc;
-            --accent-color: #e0f2fe;
+            --primary-color: #7c3aed;
+            --secondary-color: #a78bfa;
+            --accent-color: #f5f3ff;
         }
 
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
-            background-image: radial-gradient(at 100% 0%, #1e3a8a 0%, transparent 50%), radial-gradient(at 0% 100%, #1d4ed8 0%, transparent 50%);
+            background-image: radial-gradient(at 100% 0%, #172554 0%, transparent 50%), radial-gradient(at 0% 100%, #1e3a8a 0%, transparent 50%);
             background-size: 80% 80%;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -33,11 +33,11 @@
         }
 
         .hero-title {
-            animation: fadeIn 2s ease-out;
+            animation: fadeIn 1.5s ease-out;
         }
-
+        
         .gradient-text {
-            background-image: linear-gradient(to right, #e2e8f0, #a5b4fc);
+            background-image: linear-gradient(to right, var(--secondary-color), var(--accent-color));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -51,7 +51,20 @@
             transform: translateY(-2px);
             box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
         }
+        
+        .glow-logo {
+            animation: pulse-glow 2s infinite ease-in-out;
+        }
 
+        @keyframes pulse-glow {
+            0%, 100% {
+                filter: drop-shadow(0 0 5px #a78bfa) drop-shadow(0 0 10px #a78bfa);
+            }
+            50% {
+                filter: drop-shadow(0 0 15px #c4b5fd) drop-shadow(0 0 25px #c4b5fd);
+            }
+        }
+        
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -67,42 +80,83 @@
 <body class="flex flex-col items-center justify-center p-4 sm:p-8">
 
     <!-- Main Container -->
-    <div class="max-w-4xl w-full mx-auto bg-slate-800 bg-opacity-70 backdrop-blur-sm rounded-3xl shadow-xl p-6 sm:p-10 flex flex-col items-center text-center space-y-12 my-8">
+    <div class="max-w-4xl w-full mx-auto bg-slate-900 bg-opacity-70 backdrop-blur-sm rounded-3xl shadow-2xl p-6 sm:p-10 flex flex-col items-center text-center space-y-12 my-8">
+        
+        <!-- Logo Section -->
+        <div class="w-full mt-6 animate-[fadeIn_1.5s_ease-out_0s_forwards] opacity-0">
+            <svg class="h-16 w-16 mx-auto text-slate-300 glow-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 1L6 8h12L12 1z" />
+                <path d="M12 1L6 8h12L12 1z" fill="url(#diamond-gradient)"/>
+                <path d="M12 1L2 14l10 9l10-9L12 1z" stroke="currentColor"/>
+                <path d="M2 14h20" stroke="currentColor"/>
+                <path d="M12 1L2 14l10 9l10-9L12 1z" fill="none"/>
+                <path d="M12 1l-10 13h20l-10-13z" fill="url(#diamond-gradient)"/>
+                <defs>
+                    <linearGradient id="diamond-gradient" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#e0f2fe" />
+                        <stop offset="100%" stop-color="#a5b4fc" />
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
 
         <!-- Header/Hero Section -->
-        <header class="w-full space-y-4">
-            <h1 class="hero-title text-4xl sm:text-6xl font-extrabold leading-tight tracking-tight mt-6">
+        <header class="w-full space-y-4 animate-[fadeIn_1.5s_ease-out_0.2s_forwards] opacity-0">
+            <h1 class="hero-title text-4xl sm:text-6xl font-extrabold leading-tight tracking-tight">
                 <span class="gradient-text">LastDiamond.com</span>
                 <span class="block text-xl sm:text-3xl text-slate-300 font-semibold mt-2">A Timeless Brand Awaits.</span>
             </h1>
-            <p class="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto animate-[fadeIn_2s_ease-out_0.5s_forwards] opacity-0">
+            <p class="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto">
                 This premium domain is a rare find, perfect for a brand that signifies quality, luxury, and exclusivity. Seize this opportunity to build an iconic digital presence.
             </p>
         </header>
 
         <!-- Domain Value Proposition Section -->
-        <section class="w-full space-y-8 animate-[fadeIn_2s_ease-out_1s_forwards] opacity-0">
+        <section class="w-full space-y-8 animate-[fadeIn_1.5s_ease-out_0.4s_forwards] opacity-0">
             <h2 class="text-2xl sm:text-3xl font-bold text-slate-200">Key Features & Opportunities</h2>
             <div class="grid md:grid-cols-3 gap-6">
                 <!-- Feature 1 -->
-                <div class="bg-slate-700 bg-opacity-50 p-6 rounded-2xl shadow-md">
-                    <div class="text-4xl mb-4">💎</div>
+                <div class="bg-slate-800 bg-opacity-50 p-6 rounded-2xl shadow-md border border-slate-700 hover:border-violet-500 transition-colors">
+                    <div class="text-4xl mb-4 text-violet-400 mx-auto w-12 h-12">
+                        <!-- Custom SVG for Brandable & Memorable -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles">
+                            <path d="M9.9 10.3c.6.6.9 1.4.9 2.3v1c0 1.2-.4 2.4-1.3 3.3l-2.4 2.8c-.3.4-.9.4-1.2.1-2-1.8-3.4-3.9-4.7-6.2C.5 9.7-.1 8.2.1 6.6c.2-1.7 1.3-3.2 2.7-4.1.8-.6 1.7-.9 2.8-1s2.2-.1 3.2.3c.7.2 1.4.6 2.1 1.2c.4.3.7.7 1.1 1.2.5.6.9 1.2 1.3 1.9.4.6.8 1.3 1.1 2.1.3.8.5 1.5.7 2.4l1.8-1.5c.9-.8 2.1-1.2 3.3-1.2.9 0 1.9.2 2.7.7.8.4 1.5 1.1 2.1 1.9.6.8 1 1.8 1 2.9s-.4 2.1-1 2.9c-.6.8-1.3 1.5-2.1 1.9-.8.4-1.7.6-2.7.6-1.2 0-2.4-.5-3.3-1.3L13 16.7c-.5.5-1.3 1-2.1 1.2-1.2.3-2.4.2-3.6-.1-.7-.2-1.3-.5-1.9-1.2-1-1.1-1.5-2.4-1.5-3.8V9.1c0-1-.3-2-.9-2.7l-1-1.2c-.4-.4-1.1-.4-1.5-.1C.4 6.7.1 7.2.1 7.9c.2 1.2.7 2.3 1.4 3.3.6.9 1.4 1.7 2.3 2.5l2.8 2.4c.4.3.4.9.1 1.2-.4.4-.9.6-1.5.6-1 0-2-.4-2.9-1.3L2 14.1c-.3-.4-.9-.4-1.2-.1-1.8 2-3.2 4.1-4.4 6.4-.3.6-.2 1.3.1 1.8.4.5 1.1.8 1.9.8s1.6-.2 2.3-.7c.9-.6 1.7-1.3 2.3-2.1l2.4-2.8c.4-.3.9-.3 1.2 0 .4.3.9.3 1.2.1 1.8-2 3.2-4.1 4.4-6.4.3-.6.2-1.3-.1-1.8-.4-.5-1.1-.8-1.9-.8s-1.6.2-2.3.7c-.9.6-1.7 1.3-2.3 2.1z"/>
+                            <path d="M12 1L6 8h12L12 1z" />
+                            <path d="M12 1L6 8h12L12 1z" fill="url(#diamond-gradient)"/>
+                            <path d="M12 1L2 14l10 9l10-9L12 1z" stroke="currentColor"/>
+                            <path d="M2 14h20" stroke="currentColor"/>
+                            <path d="M12 1L2 14l10 9l10-9L12 1z" fill="none"/>
+                        </svg>
+                    </div>
                     <h3 class="text-xl font-bold text-slate-100 mb-2">Brandable & Memorable</h3>
                     <p class="text-slate-400 text-sm">
                         Easy to spell, pronounce, and remember, making it an ideal name for a luxury brand, jewelry store, or tech startup.
                     </p>
                 </div>
                 <!-- Feature 2 -->
-                <div class="bg-slate-700 bg-opacity-50 p-6 rounded-2xl shadow-md">
-                    <div class="text-4xl mb-4">📈</div>
+                <div class="bg-slate-800 bg-opacity-50 p-6 rounded-2xl shadow-md border border-slate-700 hover:border-violet-500 transition-colors">
+                    <div class="text-4xl mb-4 text-violet-400 mx-auto w-12 h-12">
+                        <!-- Custom SVG for High-Value Keywords -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up">
+                            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+                            <polyline points="16 7 22 7 22 13"/>
+                        </svg>
+                    </div>
                     <h3 class="text-xl font-bold text-slate-100 mb-2">High-Value Keywords</h3>
                     <p class="text-slate-400 text-sm">
                         Combines two powerful keywords, "Last" and "Diamond," which resonate with permanence, value, and rarity.
                     </p>
                 </div>
                 <!-- Feature 3 -->
-                <div class="bg-slate-700 bg-opacity-50 p-6 rounded-2xl shadow-md">
-                    <div class="text-4xl mb-4">🌐</div>
+                <div class="bg-slate-800 bg-opacity-50 p-6 rounded-2xl shadow-md border border-slate-700 hover:border-violet-500 transition-colors">
+                    <div class="text-4xl mb-4 text-violet-400 mx-auto w-12 h-12">
+                        <!-- Custom SVG for Versatile Application -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 2a14.5 14.5 0 0 0 0 20a14.5 14.5 0 0 0 0-20"/>
+                            <path d="M2 12h20"/>
+                        </svg>
+                    </div>
                     <h3 class="text-xl font-bold text-slate-100 mb-2">Versatile Application</h3>
                     <p class="text-slate-400 text-sm">
                         Suitable for multiple industries, including luxury goods, fashion, blockchain, collectibles, or a high-end blog.
@@ -110,22 +164,21 @@
                 </div>
             </div>
             
-            <!-- You can add more placeholder content here for the buyer to fill in -->
-            <div class="text-slate-400 text-sm p-4 border-l-4 border-slate-500 bg-slate-800 rounded-lg text-left">
-                <!-- Placeholder for additional value props -->
+            <!-- Instructions for the user to customize content -->
+            <div class="text-slate-400 text-sm p-4 border-l-4 border-slate-700 bg-slate-900 rounded-lg text-left">
                 <p class="font-bold text-slate-300 mb-1">
-                    <span class="text-red-400">NOTE:</span>
+                    <span class="text-violet-400">NOTE:</span>
                     This section is a placeholder!
                 </p>
                 <p>
-                    Customize the text above to highlight specific value props for your domain, such as its age, historical traffic, SEO potential, or target market.
+                    Customize the text above to highlight specific value propositions for your domain, such as its age, historical traffic, SEO potential, or target market.
                     Add any other compelling reasons a buyer should choose this domain over others.
                 </p>
             </div>
         </section>
 
         <!-- Call to Action Section with Marketplace Buttons -->
-        <section class="w-full space-y-8 animate-[fadeIn_2s_ease-out_1.5s_forwards] opacity-0">
+        <section class="w-full space-y-8 animate-[fadeIn_1.5s_ease-out_0.6s_forwards] opacity-0">
             <h2 class="text-2xl sm:text-3xl font-bold text-slate-200">Ready to Own Your Brand?</h2>
             <p class="text-slate-400 max-w-2xl mx-auto">
                 This domain is listed on the world's leading marketplaces for secure transactions. Choose your preferred platform below to make an offer or buy now.
@@ -136,13 +189,13 @@
                     Buy on Sedo
                 </a>
                 <!-- Afternic Button -->
-                <a href="#" id="afternic-link" class="cta-button w-full sm:w-auto px-8 py-3 bg-indigo-600 text-white rounded-full font-bold text-lg shadow-lg hover:bg-indigo-700 transition-colors">
+                <a href="#" id="afternic-link" class="cta-button w-full sm:w-auto px-8 py-3 bg-violet-600 text-white rounded-full font-bold text-lg shadow-lg hover:bg-violet-700 transition-colors">
                     Inquire on Afternic
                 </a>
             </div>
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
                 <!-- Atom Button -->
-                <a href="#" id="atom-link" class="cta-button w-full sm:w-auto px-8 py-3 bg-violet-600 text-white rounded-full font-bold text-lg shadow-lg hover:bg-violet-700 transition-colors">
+                <a href="#" id="atom-link" class="cta-button w-full sm:w-auto px-8 py-3 bg-indigo-600 text-white rounded-full font-bold text-lg shadow-lg hover:bg-indigo-700 transition-colors">
                     Make Offer on Atom
                 </a>
                 <!-- Spaceship Button -->
@@ -152,9 +205,9 @@
             </div>
             
             <!-- Instructions for URL customization -->
-            <div class="text-slate-400 text-sm p-4 border-l-4 border-slate-500 bg-slate-800 rounded-lg text-left">
+            <div class="text-slate-400 text-sm p-4 border-l-4 border-slate-700 bg-slate-900 rounded-lg text-left">
                 <p class="font-bold text-slate-300 mb-1">
-                    <span class="text-red-400">IMPORTANT:</span>
+                    <span class="text-violet-400">IMPORTANT:</span>
                     Placeholder URLs
                 </p>
                 <p>
@@ -164,17 +217,17 @@
         </section>
 
         <!-- Contact Section -->
-        <section class="w-full mt-12 animate-[fadeIn_2s_ease-out_2s_forwards] opacity-0">
+        <section class="w-full mt-12 animate-[fadeIn_1.5s_ease-out_0.8s_forwards] opacity-0">
             <h2 class="text-xl font-bold text-slate-200 mb-4">Contact the Owner</h2>
             <p class="text-slate-400 max-w-2xl mx-auto mb-6">
                 For serious inquiries or to discuss this domain directly, please reach out via the email below.
             </p>
-            <a href="mailto:your_email@example.com" class="text-indigo-400 hover:text-indigo-300 font-medium transition-colors">your_email@example.com</a>
+            <a href="mailto:your_email@example.com" class="text-violet-400 hover:text-violet-300 font-medium transition-colors">your_email@example.com</a>
             
             <!-- Instructions for email customization -->
-            <div class="text-slate-400 text-sm p-4 border-l-4 border-slate-500 bg-slate-800 rounded-lg text-left mt-6">
+            <div class="text-slate-400 text-sm p-4 border-l-4 border-slate-700 bg-slate-900 rounded-lg text-left mt-6">
                 <p class="font-bold text-slate-300 mb-1">
-                    <span class="text-red-400">CUSTOMIZE:</span>
+                    <span class="text-violet-400">CUSTOMIZE:</span>
                     Your Email
                 </p>
                 <p>
