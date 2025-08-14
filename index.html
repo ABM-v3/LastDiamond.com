@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LastDiamond.com - A Premium Domain Name for Sale</title>
+    <title>LastDiamond.com - A Premium Domain Asset for Sale</title>
     <!-- Favicon and Inter font link -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>💎</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,25 +12,29 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* A more elegant, sophisticated color palette */
+        /* A premium, light theme with subtle texture */
         :root {
-            --bg-color: #ffffff;
-            --text-color: #1a202c;
-            --primary-color: #0c4a6e; /* Deep blue/sapphire */
-            --secondary-color: #64748b; /* Slate gray */
-            --accent-color: #fbbf24; /* A hint of gold/amber */
+            --bg-color: #fcfcfc;
+            --text-color: #1c2128;
+            --primary-color: #0c4a6e;
+            --secondary-color: #64748b;
+            --accent-color: #d1b473; /* Golden hue for luxury */
         }
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.6;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d3d6db' fill-opacity='0.1'%3E%3Cpath d='M36 34.5c0 .828.672 1.5 1.5 1.5s1.5-.672 1.5-1.5-.672-1.5-1.5-1.5-1.5.672-1.5 1.5zM12 30c0-1.657 1.343-3 3-3s3 1.343 3 3-1.343 3-3 3-3-1.343-3-3z'/%3E%3Cpath d='M21 21c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3zM30 0c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3zM45 24c0-1.657 1.343-3 3-3s3 1.343 3 3-1.343 3-3 3-3-1.343-3-3zM45 36c0-1.657 1.343-3 3-3s3 1.343 3 3-1.343 3-3 3-3-1.343-3-3zM36 48c0-1.657 1.343-3 3-3s3 1.343 3 3-1.343 3-3 3-3-1.343-3-3z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .container-card {
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08), 0 5px 15px rgba(0,0,0,0.05);
         }
 
         .cta-button {
             transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-            border-radius: 9999px; /* For pill-shaped buttons */
+            border-radius: 9999px;
         }
         .cta-button:hover {
             transform: translateY(-2px);
@@ -41,7 +45,6 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
         .shine-animation {
             animation: shine 2s infinite linear;
         }
@@ -53,70 +56,74 @@
                 transform: translateX(100%) rotate(45deg);
             }
         }
+        .logo-glow {
+            animation: glowing 1.5s infinite alternate;
+        }
+        @keyframes glowing {
+            from { filter: drop-shadow(0 0 4px rgba(251,191,36,0.6)); }
+            to { filter: drop-shadow(0 0 8px rgba(251,191,36,0.8)); }
+        }
     </style>
 </head>
 <body class="flex flex-col items-center justify-center p-4 sm:p-8">
 
     <!-- Main Container -->
-    <div class="max-w-4xl w-full mx-auto bg-white rounded-3xl shadow-xl p-6 sm:p-10 flex flex-col items-center text-center space-y-12">
+    <div class="max-w-4xl w-full mx-auto bg-white rounded-3xl container-card p-6 sm:p-10 flex flex-col items-center text-center space-y-12">
 
         <!-- Hero Section -->
         <header class="w-full space-y-4">
-            <!-- New, professional diamond logo with a shine effect -->
-            <div class="relative w-24 h-24 mx-auto mb-4">
-                <svg class="w-full h-full text-gray-800" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 1L2 12H22L12 1Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12 23L2 12H22L12 23Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M2 12L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- New, intricate diamond logo with a shine effect -->
+            <div class="relative w-32 h-32 mx-auto mb-4 logo-glow">
+                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Base diamond shape -->
+                    <path d="M50 1L10 30L50 99L90 30L50 1Z" fill="#F0F8FF" stroke="#a3a3a3" stroke-width="1.5"/>
+                    <!-- Facets -->
+                    <path d="M50 1L50 99M10 30L90 30M10 30L50 99M90 30L50 99" stroke="#a3a3a3" stroke-width="1"/>
+                    <path d="M50 1L20 20L50 30L80 20L50 1Z" fill="#E6EEF5"/>
+                    <path d="M50 30L20 20L10 30M50 30L80 20L90 30" stroke="#a3a3a3" stroke-width="1"/>
                 </svg>
                 <!-- Shine effect -->
                 <div class="absolute inset-0 overflow-hidden">
-                    <div class="absolute inset-y-0 w-1/3 bg-white/50 backdrop-blur-sm transform -skew-x-12 shine-animation"></div>
+                    <div class="absolute inset-y-0 w-1/3 bg-white/60 transform -skew-x-12 shine-animation"></div>
                 </div>
             </div>
             
-            <h1 class="text-4xl sm:text-6xl font-extrabold leading-tight tracking-tight text-gray-900">
+            <h1 class="text-5xl sm:text-7xl font-extrabold leading-tight tracking-tight text-gray-900">
                 <span class="gradient-text">LastDiamond.com</span>
             </h1>
             <h2 class="text-xl sm:text-3xl text-gray-700 font-semibold max-w-2xl mx-auto">
-                The Final Word in Luxury. A Domain Asset of Unmatched Quality.
+                A Singular Asset. The Pinnacle of Your Portfolio.
             </h2>
         </header>
 
         <!-- Value Proposition Section -->
         <section class="w-full space-y-8">
             <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-                LastDiamond.com is not just a domain; it’s a brand-ready asset with a proven value proposition. Its premium status is backed by key metrics and powerful keyword relevance.
+                LastDiamond.com isn't just a domain; it’s a strategic investment. Its value is solidified by its impeccable branding, powerful keyword relevance, and clean historical profile.
             </p>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
                 <!-- Value Point 1: Brandability -->
                 <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-lg">
-                    <div class="text-primary-color text-2xl font-bold mt-1">
-                        <span role="img" aria-label="diamond icon">💎</span>
-                    </div>
+                    <div class="text-accent-color text-2xl font-bold mt-1">💎</div>
                     <div>
-                        <h3 class="font-bold text-lg text-gray-900">Brand-Ready & Memorable</h3>
-                        <p class="text-sm text-gray-600">Short, simple, and impactful. The domain name itself conveys rarity and high value, instantly building brand trust.</p>
+                        <h3 class="font-bold text-lg text-gray-900">Uncompromising Brand Power</h3>
+                        <p class="text-sm text-gray-600">Short, memorable, and impactful. This name instantly communicates rarity, luxury, and high value to your target audience.</p>
                     </div>
                 </div>
                 <!-- Value Point 2: Versatility -->
                 <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-lg">
-                    <div class="text-primary-color text-2xl font-bold mt-1">
-                        <span role="img" aria-label="globe icon">🌐</span>
-                    </div>
+                    <div class="text-accent-color text-2xl font-bold mt-1">🌐</div>
                     <div>
-                        <h3 class="font-bold text-lg text-gray-900">Highly Versatile Asset</h3>
-                        <p class="text-sm text-gray-600">Perfect for luxury retail, fine jewelry, high-end real estate, or even a blockchain project focused on digital assets.</p>
+                        <h3 class="font-bold text-lg text-gray-900">Universal Market Appeal</h3>
+                        <p class="text-sm text-gray-600">The ideal foundation for luxury goods, fine jewelry, crypto/NFT ventures, high-end real estate, or exclusive B2B services.</p>
                     </div>
                 </div>
                 <!-- Value Point 3: SEO Power -->
                 <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-lg">
-                    <div class="text-primary-color text-2xl font-bold mt-1">
-                        <span role="img" aria-label="bar chart icon">📈</span>
-                    </div>
+                    <div class="text-accent-color text-2xl font-bold mt-1">📈</div>
                     <div>
-                        <h3 class="font-bold text-lg text-gray-900">SEO & SEM Advantage</h3>
-                        <p class="text-sm text-gray-600">Benefit from strong keyword authority and a clean history. This domain is a powerful foundation for your digital marketing strategy.</p>
+                        <h3 class="font-bold text-lg text-gray-900">Dominant SEO & SEM Potential</h3>
+                        <p class="text-sm text-gray-600">A clean, aged profile with a strong backlink history gives you a significant head start in organic search rankings.</p>
                     </div>
                 </div>
             </div>
@@ -124,13 +131,13 @@
 
         <!-- Pricing and Metrics Section -->
         <section class="w-full space-y-6">
-            <h3 class="text-xl sm:text-2xl font-bold text-gray-900">The Asset at a Glance</h3>
+            <h3 class="text-xl sm:text-2xl font-bold text-gray-900">Asset Valuation & Metrics</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <!-- Price Box -->
                 <div class="bg-gray-100 rounded-xl p-8 shadow-inner">
                     <div class="text-5xl font-extrabold text-primary-color">$75,000 USD</div>
                     <p class="text-sm text-gray-600 font-medium mt-2">
-                        **Buy it now** via Escrow.com or contact us for an offer.
+                        **Buy it now** securely via Escrow.com or contact us for an offer.
                     </p>
                 </div>
                 <!-- Metrics Table -->
@@ -153,37 +160,32 @@
 
         <!-- Marketplace & Contact Section -->
         <section class="w-full space-y-6">
-            <h3 class="text-xl sm:text-2xl font-bold text-gray-900">Ready to Own This Asset?</h3>
+            <h3 class="text-xl sm:text-2xl font-bold text-gray-900">Your Next Strategic Move?</h3>
             <p class="text-gray-600 max-w-xl mx-auto">
-                Secure your purchase through a trusted marketplace or contact the owner directly for a fast, secure escrow transaction.
+                This is a rare opportunity. Secure this asset on a trusted platform or contact us directly to acquire it with confidence and speed.
             </p>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                <!-- GoDaddy Button -->
+                <!-- Marketplace Buttons with high-quality logos -->
                 <a href="#" id="godaddy-link" class="cta-button w-full px-6 py-3 bg-white text-gray-800 border border-gray-300 font-medium text-sm flex items-center justify-center gap-2 hover:bg-gray-100 transition-colors">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/GoDaddy_logo.svg/1200px-GoDaddy_logo.svg.png" alt="GoDaddy Logo" class="h-5">
+                    <img src="https://assets.godaddy.com/logos/GoDaddy_Logo_Black.svg" onerror="this.src='https://placehold.co/100x30/FFFFFF/000000?text=GoDaddy'" alt="GoDaddy Logo" class="h-5">
                     Buy on GoDaddy
                 </a>
-                <!-- Sedo Button -->
                 <a href="#" id="sedo-link" class="cta-button w-full px-6 py-3 bg-white text-gray-800 border border-gray-300 font-medium text-sm flex items-center justify-center gap-2 hover:bg-gray-100 transition-colors">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Sedo_logo.svg/1200px-Sedo_logo.svg.png" alt="Sedo Logo" class="h-4">
+                    <img src="https://www.sedo.com/wp-content/uploads/2021/03/Sedo-Logo-1.svg" onerror="this.src='https://placehold.co/100x30/FFFFFF/000000?text=Sedo'" alt="Sedo Logo" class="h-4">
                     Buy on Sedo
                 </a>
-                <!-- Dan.com Button -->
                 <a href="#" id="dan-link" class="cta-button w-full px-6 py-3 bg-white text-gray-800 border border-gray-300 font-medium text-sm flex items-center justify-center gap-2 hover:bg-gray-100 transition-colors">
-                    <img src="https://dan.com/images/dan-logo.svg" alt="Dan.com Logo" class="h-4">
+                    <img src="https://static.dan.com/images/dan-logo.svg" onerror="this.src='https://placehold.co/100x30/FFFFFF/000000?text=Dan.com'" alt="Dan.com Logo" class="h-4">
                     Buy on Dan.com
                 </a>
-                <!-- Afternic Button -->
                 <a href="#" id="afternic-link" class="cta-button w-full px-6 py-3 bg-white text-gray-800 border border-gray-300 font-medium text-sm flex items-center justify-center gap-2 hover:bg-gray-100 transition-colors">
-                    <img src="https://brand.afternic.com/assets/images/AfternicLogo.svg" alt="Afternic Logo" class="h-4">
+                    <img src="https://brand.afternic.com/assets/images/AfternicLogo.svg" onerror="this.src='https://placehold.co/100x30/FFFFFF/000000?text=Afternic'" alt="Afternic Logo" class="h-4">
                     Inquire on Afternic
                 </a>
-                <!-- Squadhelp Button -->
                 <a href="#" id="squadhelp-link" class="cta-button w-full px-6 py-3 bg-white text-gray-800 border border-gray-300 font-medium text-sm flex items-center justify-center gap-2 hover:bg-gray-100 transition-colors">
-                    <img src="https://www.squadhelp.com/assets/img/logo.svg" alt="Squadhelp Logo" class="h-4">
+                    <img src="https://www.squadhelp.com/assets/img/logo.svg" onerror="this.src='https://placehold.co/100x30/FFFFFF/000000?text=Squadhelp'" alt="Squadhelp Logo" class="h-4">
                     Explore on Squadhelp
                 </a>
-                <!-- Escrow Button -->
                 <a href="#" id="escrow-link" class="cta-button w-full px-6 py-3 bg-primary-color text-white border border-transparent font-medium text-sm flex items-center justify-center gap-2 hover:bg-primary-color/90 transition-colors">
                     Direct Escrow Purchase
                 </a>
