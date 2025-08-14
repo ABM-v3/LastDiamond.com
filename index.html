@@ -63,6 +63,23 @@
             from { filter: drop-shadow(0 0 4px rgba(251,191,36,0.6)); }
             to { filter: drop-shadow(0 0 8px rgba(251,191,36,0.8)); }
         }
+        /* New animation for diamond rotation */
+        .rotate-animation {
+            animation: rotate 10s infinite linear;
+            transform-origin: center center;
+        }
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        /* New colors for the letters L and D */
+        .letter-L, .letter-D {
+            color: var(--accent-color);
+        }
     </style>
 </head>
 <body class="flex flex-col items-center justify-center p-4 sm:p-8">
@@ -72,9 +89,9 @@
 
         <!-- Hero Section -->
         <header class="w-full space-y-4">
-            <!-- New, intricate diamond logo with a shine effect -->
+            <!-- New, intricate diamond logo with a shine and rotate effect -->
             <div class="relative w-32 h-32 mx-auto mb-4 logo-glow">
-                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="rotate-animation" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <!-- Base diamond shape -->
                     <path d="M50 1L10 30L50 99L90 30L50 1Z" fill="#F0F8FF" stroke="#a3a3a3" stroke-width="1.5"/>
                     <!-- Facets -->
@@ -89,7 +106,7 @@
             </div>
             
             <h1 class="text-5xl sm:text-7xl font-extrabold leading-tight tracking-tight text-gray-900">
-                <span class="gradient-text">LastDiamond.com</span>
+                <span class="letter-L">L</span>ast<span class="letter-D">D</span>iamond.com
             </h1>
             <h2 class="text-xl sm:text-3xl text-gray-700 font-semibold max-w-2xl mx-auto">
                 A Singular Asset. The Pinnacle of Your Portfolio.
