@@ -12,25 +12,25 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* A professional dark theme with golden accents */
+        /* A clean, professional light theme with golden accents */
         :root {
-            --bg-color: #0d1117;
-            --text-color: #e2e8f0;
-            --primary-color: #d1b473; /* Golden hue for luxury */
-            --secondary-color: #64748b;
-            --accent-color: #fbbf24;
+            --bg-color: #f0f4f8; /* Soft light gray background */
+            --text-color: #1f2937; /* Dark gray for main text */
+            --primary-color: #a18850; /* Muted golden hue for luxury */
+            --secondary-color: #4b5563;
+            --accent-color: #d4a75c;
         }
         body {
             font-family: 'Poppins', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.6;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232f3844' fill-opacity='0.1'%3E%3Cpath d='M36 34.5c0 .828.672 1.5 1.5 1.5s1.5-.672 1.5-1.5-.672-1.5-1.5-1.5-1.5.672-1.5 1.5zM12 30c0-1.657 1.343-3 3-3s3 1.343 3 3-1.343 3-3 3-3-1.343-3-3z'/%3E%3Cpath d='M21 21c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3zM30 0c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3zM45 24c0-1.657 1.343-3 3-3s3 1.343 3 3-1.343 3-3 3-3-1.343-3-3zM45 36c0-1.657 1.343-3 3-3s3 1.343 3 3-1.343 3-3 3-3-1.343-3-3zM36 48c0-1.657 1.343-3 3-3s3 1.343 3 3-1.343 3-3 3-3-1.343-3-3z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%236b7280' fill-opacity='0.1'%3E%3Cpath d='M36 34.5c0 .828.672 1.5 1.5 1.5s1.5-.672 1.5-1.5-.672-1.5-1.5-1.5-1.5.672-1.5 1.5zM12 30c0-1.657 1.343-3 3-3s3 1.343 3 3-1.343 3-3 3-3-1.343-3-3z'/%3E%3Cpath d='M21 21c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3zM30 0c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3zM45 24c0-1.657 1.343-3 3-3s3 1.343 3 3-1.343 3-3 3-3-1.343-3-3zM45 36c0-1.657 1.343-3 3-3s3 1.343 3 3-1.343 3-3 3-3-1.343-3-3zM36 48c0-1.657 1.343-3 3-3s3 1.343 3 3-1.343 3-3 3-3-1.343-3-3z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
         
         .container-card {
-            background-color: #161b22;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.4), 0 5px 15px rgba(0,0,0,0.2);
+            background-color: #ffffff;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1), 0 5px 15px rgba(0,0,0,0.05);
         }
 
         .cta-button {
@@ -39,7 +39,7 @@
         }
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.2), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.05);
         }
         .text-accent-gold {
             color: var(--accent-color);
@@ -47,11 +47,11 @@
 
         /* Modal styling */
         .modal {
-            background-color: rgba(0, 0, 0, 0.75);
+            background-color: rgba(0, 0, 0, 0.5);
         }
         .modal-content {
-            background-color: #161b22;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.4), 0 5px 15px rgba(0,0,0,0.2);
+            background-color: #ffffff;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1), 0 5px 15px rgba(0,0,0,0.05);
         }
     </style>
 </head>
@@ -67,43 +67,43 @@
                 <!-- 2D Diamond Logo -->
                 <span class="text-5xl sm:text-7xl text-accent-gold">💎</span>
                 
-                <h1 class="text-5xl sm:text-7xl font-extrabold leading-tight tracking-tight text-gray-100">
+                <h1 class="text-5xl sm:text-7xl font-extrabold leading-tight tracking-tight text-gray-900">
                     <span class="text-accent-gold">L</span>ast<span class="text-accent-gold">D</span>iamond.com
                 </h1>
             </div>
-            <h2 class="text-xl sm:text-3xl text-gray-300 font-semibold max-w-2xl mx-auto">
+            <h2 class="text-xl sm:text-3xl text-gray-700 font-semibold max-w-2xl mx-auto">
                 A Singular Asset. The Pinnacle of Your Portfolio.
             </h2>
         </header>
 
         <!-- Value Proposition Section -->
         <section class="w-full space-y-8">
-            <p class="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto">
+            <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
                 LastDiamond.com isn't just a domain; it’s a strategic investment. Its value is solidified by its impeccable branding, powerful keyword relevance, and clean historical profile.
             </p>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
                 <!-- Value Point 1: Brandability -->
-                <div class="flex items-start gap-4 p-4 bg-gray-800 rounded-lg shadow-inner">
+                <div class="flex items-start gap-4 p-4 bg-gray-100 rounded-lg shadow-inner">
                     <div class="text-accent-gold text-2xl font-bold mt-1">💎</div>
                     <div>
-                        <h3 class="font-bold text-lg text-gray-100">Uncompromising Brand Power</h3>
-                        <p class="text-sm text-gray-400">Short, memorable, and impactful. This name instantly communicates rarity, luxury, and high value to your target audience.</p>
+                        <h3 class="font-bold text-lg text-gray-900">Uncompromising Brand Power</h3>
+                        <p class="text-sm text-gray-600">Short, memorable, and impactful. This name instantly communicates rarity, luxury, and high value to your target audience.</p>
                     </div>
                 </div>
                 <!-- Value Point 2: Versatility -->
-                <div class="flex items-start gap-4 p-4 bg-gray-800 rounded-lg shadow-inner">
+                <div class="flex items-start gap-4 p-4 bg-gray-100 rounded-lg shadow-inner">
                     <div class="text-accent-gold text-2xl font-bold mt-1">🌐</div>
                     <div>
-                        <h3 class="font-bold text-lg text-gray-100">Universal Market Appeal</h3>
-                        <p class="text-sm text-gray-400">The ideal foundation for luxury goods, fine jewelry, crypto/NFT ventures, high-end real estate, or exclusive B2B services.</p>
+                        <h3 class="font-bold text-lg text-gray-900">Universal Market Appeal</h3>
+                        <p class="text-sm text-gray-600">The ideal foundation for luxury goods, fine jewelry, crypto/NFT ventures, high-end real estate, or exclusive B2B services.</p>
                     </div>
                 </div>
                 <!-- Value Point 3: SEO Power -->
-                <div class="flex items-start gap-4 p-4 bg-gray-800 rounded-lg shadow-inner">
+                <div class="flex items-start gap-4 p-4 bg-gray-100 rounded-lg shadow-inner">
                     <div class="text-accent-gold text-2xl font-bold mt-1">📈</div>
                     <div>
-                        <h3 class="font-bold text-lg text-gray-100">Dominant SEO & SEM Potential</h3>
-                        <p class="text-sm text-gray-400">A clean, aged profile with a strong backlink history gives you a significant head start in organic search rankings.</p>
+                        <h3 class="font-bold text-lg text-gray-900">Dominant SEO & SEM Potential</h3>
+                        <p class="text-sm text-gray-600">A clean, aged profile with a strong backlink history gives you a significant head start in organic search rankings.</p>
                     </div>
                 </div>
             </div>
@@ -111,19 +111,19 @@
 
         <!-- Pricing and Metrics Section -->
         <section class="w-full space-y-6">
-            <h3 class="text-xl sm:text-2xl font-bold text-gray-100">Asset Valuation & Metrics</h3>
+            <h3 class="text-xl sm:text-2xl font-bold text-gray-900">Asset Valuation & Metrics</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <!-- Price Box -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-inner">
+                <div class="bg-gray-100 rounded-xl p-8 shadow-inner">
                     <div class="text-5xl font-extrabold text-primary-color">$75,000 USD</div>
-                    <p class="text-sm text-gray-400 font-medium mt-2">
+                    <p class="text-sm text-gray-600 font-medium mt-2">
                         **Buy it now** securely via Escrow.com or contact us for an offer.
                     </p>
                 </div>
                 <!-- Metrics Table -->
-                <div class="bg-gray-800 rounded-xl p-6 shadow-inner text-left">
-                    <h4 class="font-bold text-lg text-gray-100 mb-2">Key Domain Metrics</h4>
-                    <ul class="space-y-1 text-sm text-gray-300">
+                <div class="bg-gray-100 rounded-xl p-6 shadow-inner text-left">
+                    <h4 class="font-bold text-lg text-gray-900 mb-2">Key Domain Metrics</h4>
+                    <ul class="space-y-1 text-sm text-gray-700">
                         <li><strong>Est. Value:</strong> $80,000 - $120,000</li>
                         <li><strong>Registration Year:</strong> 2008</li>
                         <li><strong>DA/PA:</strong> 45 / 50 (Moz)</li>
@@ -140,39 +140,39 @@
 
         <!-- Marketplace & Contact Section -->
         <section class="w-full space-y-6">
-            <h3 class="text-xl sm:text-2xl font-bold text-gray-100">Your Next Strategic Move?</h3>
-            <p class="text-gray-400 max-w-xl mx-auto">
+            <h3 class="text-xl sm:text-2xl font-bold text-gray-900">Your Next Strategic Move?</h3>
+            <p class="text-gray-600 max-w-xl mx-auto">
                 This is a rare opportunity. Secure this asset on a trusted platform or contact us directly to acquire it with confidence and speed.
             </p>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 <!-- Marketplace Buttons with high-quality logos -->
-                <a href="#" id="godaddy-link" class="cta-button w-full px-6 py-3 bg-gray-900 text-gray-100 border border-gray-700 font-medium text-sm flex items-center justify-center gap-2 hover:bg-gray-800 transition-colors">
-                    <img src="https://assets.godaddy.com/logos/GoDaddy_Logo_Black.svg" onerror="this.src='https://placehold.co/100x30/000000/FFFFFF?text=GoDaddy'" alt="GoDaddy Logo" class="h-5 invert">
+                <a href="#" id="godaddy-link" class="cta-button w-full px-6 py-3 bg-white text-gray-900 border border-gray-300 font-medium text-sm flex items-center justify-center gap-2 hover:bg-gray-200 transition-colors">
+                    <img src="https://assets.godaddy.com/logos/GoDaddy_Logo_Black.svg" onerror="this.src='https://placehold.co/100x30/000000/FFFFFF?text=GoDaddy'" alt="GoDaddy Logo" class="h-5">
                     Buy on GoDaddy
                 </a>
-                <a href="#" id="sedo-link" class="cta-button w-full px-6 py-3 bg-gray-900 text-gray-100 border border-gray-700 font-medium text-sm flex items-center justify-center gap-2 hover:bg-gray-800 transition-colors">
-                    <img src="https://www.sedo.com/wp-content/uploads/2021/03/Sedo-Logo-1.svg" onerror="this.src='https://placehold.co/100x30/000000/FFFFFF?text=Sedo'" alt="Sedo Logo" class="h-4 invert">
+                <a href="#" id="sedo-link" class="cta-button w-full px-6 py-3 bg-white text-gray-900 border border-gray-300 font-medium text-sm flex items-center justify-center gap-2 hover:bg-gray-200 transition-colors">
+                    <img src="https://www.sedo.com/wp-content/uploads/2021/03/Sedo-Logo-1.svg" onerror="this.src='https://placehold.co/100x30/000000/FFFFFF?text=Sedo'" alt="Sedo Logo" class="h-4">
                     Buy on Sedo
                 </a>
-                <a href="#" id="dan-link" class="cta-button w-full px-6 py-3 bg-gray-900 text-gray-100 border border-gray-700 font-medium text-sm flex items-center justify-center gap-2 hover:bg-gray-800 transition-colors">
-                    <img src="https://static.dan.com/images/dan-logo.svg" onerror="this.src='https://placehold.co/100x30/000000/FFFFFF?text=Dan.com'" alt="Dan.com Logo" class="h-4 invert">
+                <a href="#" id="dan-link" class="cta-button w-full px-6 py-3 bg-white text-gray-900 border border-gray-300 font-medium text-sm flex items-center justify-center gap-2 hover:bg-gray-200 transition-colors">
+                    <img src="https://static.dan.com/images/dan-logo.svg" onerror="this.src='https://placehold.co/100x30/000000/FFFFFF?text=Dan.com'" alt="Dan.com Logo" class="h-4">
                     Buy on Dan.com
                 </a>
-                <a href="#" id="afternic-link" class="cta-button w-full px-6 py-3 bg-gray-900 text-gray-100 border border-gray-700 font-medium text-sm flex items-center justify-center gap-2 hover:bg-gray-800 transition-colors">
-                    <img src="https://brand.afternic.com/assets/images/AfternicLogo.svg" onerror="this.src='https://placehold.co/100x30/000000/FFFFFF?text=Afternic'" alt="Afternic Logo" class="h-4 invert">
+                <a href="#" id="afternic-link" class="cta-button w-full px-6 py-3 bg-white text-gray-900 border border-gray-300 font-medium text-sm flex items-center justify-center gap-2 hover:bg-gray-200 transition-colors">
+                    <img src="https://brand.afternic.com/assets/images/AfternicLogo.svg" onerror="this.src='https://placehold.co/100x30/000000/FFFFFF?text=Afternic'" alt="Afternic Logo" class="h-4">
                     Inquire on Afternic
                 </a>
-                <a href="#" id="squadhelp-link" class="cta-button w-full px-6 py-3 bg-gray-900 text-gray-100 border border-gray-700 font-medium text-sm flex items-center justify-center gap-2 hover:bg-gray-800 transition-colors">
-                    <img src="https://www.squadhelp.com/assets/img/logo.svg" onerror="this.src='https://placehold.co/100x30/000000/FFFFFF?text=Squadhelp'" alt="Squadhelp Logo" class="h-4 invert">
+                <a href="#" id="squadhelp-link" class="cta-button w-full px-6 py-3 bg-white text-gray-900 border border-gray-300 font-medium text-sm flex items-center justify-center gap-2 hover:bg-gray-200 transition-colors">
+                    <img src="https://www.squadhelp.com/assets/img/logo.svg" onerror="this.src='https://placehold.co/100x30/000000/FFFFFF?text=Squadhelp'" alt="Squadhelp Logo" class="h-4">
                     Explore on Squadhelp
                 </a>
             </div>
             
             <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-                <button id="makeOfferBtn" class="cta-button px-6 py-3 bg-primary-color text-gray-900 border border-transparent font-bold text-sm hover:bg-primary-color/90 transition-colors">
+                <button id="makeOfferBtn" class="cta-button px-6 py-3 bg-primary-color text-white border border-transparent font-bold text-sm hover:bg-primary-color/90 transition-colors">
                     Make an Offer
                 </button>
-                <a href="#" id="escrow-link" class="cta-button px-6 py-3 bg-gray-900 text-gray-100 border border-gray-700 font-medium text-sm flex items-center justify-center gap-2 hover:bg-gray-800 transition-colors">
+                <a href="#" id="escrow-link" class="cta-button px-6 py-3 bg-white text-gray-900 border border-gray-300 font-medium text-sm flex items-center justify-center gap-2 hover:bg-gray-200 transition-colors">
                     Buy Now via Escrow.com
                 </a>
             </div>
@@ -180,17 +180,17 @@
 
         <!-- Trust Signals Section -->
         <section class="w-full space-y-4">
-            <h3 class="text-xl sm:text-2xl font-bold text-gray-100">As Featured On</h3>
+            <h3 class="text-xl sm:text-2xl font-bold text-gray-900">As Featured On</h3>
             <div class="flex flex-wrap justify-center items-center gap-8">
-                <img src="https://assets.godaddy.com/logos/GoDaddy_Logo_Black.svg" onerror="this.src='https://placehold.co/100x30/000000/FFFFFF?text=GoDaddy'" alt="GoDaddy Logo" class="h-6 opacity-60 hover:opacity-100 invert transition-opacity">
-                <img src="https://www.sedo.com/wp-content/uploads/2021/03/Sedo-Logo-1.svg" onerror="this.src='https://placehold.co/100x30/000000/FFFFFF?text=Sedo'" alt="Sedo Logo" class="h-5 opacity-60 hover:opacity-100 invert transition-opacity">
-                <img src="https://static.dan.com/images/dan-logo.svg" onerror="this.src='https://placehold.co/100x30/000000/FFFFFF?text=Dan.com'" alt="Dan.com Logo" class="h-5 opacity-60 hover:opacity-100 invert transition-opacity">
-                <img src="https://brand.afternic.com/assets/images/AfternicLogo.svg" onerror="this.src='https://placehold.co/100x30/000000/FFFFFF?text=Afternic'" alt="Afternic Logo" class="h-5 opacity-60 hover:opacity-100 invert transition-opacity">
+                <img src="https://assets.godaddy.com/logos/GoDaddy_Logo_Black.svg" onerror="this.src='https://placehold.co/100x30/000000/FFFFFF?text=GoDaddy'" alt="GoDaddy Logo" class="h-6 opacity-60 hover:opacity-100 transition-opacity">
+                <img src="https://www.sedo.com/wp-content/uploads/2021/03/Sedo-Logo-1.svg" onerror="this.src='https://placehold.co/100x30/000000/FFFFFF?text=Sedo'" alt="Sedo Logo" class="h-5 opacity-60 hover:opacity-100 transition-opacity">
+                <img src="https://static.dan.com/images/dan-logo.svg" onerror="this.src='https://placehold.co/100x30/000000/FFFFFF?text=Dan.com'" alt="Dan.com Logo" class="h-5 opacity-60 hover:opacity-100 transition-opacity">
+                <img src="https://brand.afternic.com/assets/images/AfternicLogo.svg" onerror="this.src='https://placehold.co/100x30/000000/FFFFFF?text=Afternic'" alt="Afternic Logo" class="h-5 opacity-60 hover:opacity-100 transition-opacity">
             </div>
         </section>
 
         <!-- Footer -->
-        <footer class="w-full pt-6 border-t border-gray-800 text-xs text-gray-500">
+        <footer class="w-full pt-6 border-t border-gray-200 text-xs text-gray-500">
             &copy; 2025 LastDiamond.com. All rights reserved.
         </footer>
     </div>
@@ -199,27 +199,27 @@
     <div id="offerModal" class="modal fixed inset-0 z-50 flex items-center justify-center hidden p-4">
         <div class="modal-content w-full max-w-xl rounded-xl p-8 space-y-6">
             <div class="flex justify-between items-center">
-                <h3 class="text-2xl font-bold text-gray-100">Make an Offer</h3>
-                <button id="closeModalBtn" class="text-gray-400 hover:text-gray-100 transition-colors text-2xl leading-none">&times;</button>
+                <h3 class="text-2xl font-bold text-gray-900">Make an Offer</h3>
+                <button id="closeModalBtn" class="text-gray-500 hover:text-gray-900 transition-colors text-2xl leading-none">&times;</button>
             </div>
-            <p class="text-sm text-gray-400">
+            <p class="text-sm text-gray-600">
                 Please provide your contact information and a serious offer. We will respond promptly.
             </p>
             <form id="offerForm" class="space-y-4">
                 <div>
-                    <label for="name" class="block text-sm font-medium text-gray-300">Your Name</label>
-                    <input type="text" id="name" name="name" class="mt-1 block w-full rounded-md bg-gray-800 border-gray-700 text-gray-100 focus:ring-primary-color focus:border-primary-color" required>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Your Name</label>
+                    <input type="text" id="name" name="name" class="mt-1 block w-full rounded-md bg-gray-100 border-gray-300 text-gray-900 focus:ring-primary-color focus:border-primary-color" required>
                 </div>
                 <div>
-                    <label for="email" class="block text-sm font-medium text-gray-300">Your Email</label>
-                    <input type="email" id="email" name="email" class="mt-1 block w-full rounded-md bg-gray-800 border-gray-700 text-gray-100 focus:ring-primary-color focus:border-primary-color" required>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Your Email</label>
+                    <input type="email" id="email" name="email" class="mt-1 block w-full rounded-md bg-gray-100 border-gray-300 text-gray-900 focus:ring-primary-color focus:border-primary-color" required>
                 </div>
                 <div>
-                    <label for="offer" class="block text-sm font-medium text-gray-300">Your Offer (USD)</label>
-                    <input type="number" id="offer" name="offer" class="mt-1 block w-full rounded-md bg-gray-800 border-gray-700 text-gray-100 focus:ring-primary-color focus:border-primary-color" required>
+                    <label for="offer" class="block text-sm font-medium text-gray-700">Your Offer (USD)</label>
+                    <input type="number" id="offer" name="offer" class="mt-1 block w-full rounded-md bg-gray-100 border-gray-300 text-gray-900 focus:ring-primary-color focus:border-primary-color" required>
                 </div>
                 <div class="flex justify-end">
-                    <button type="submit" class="cta-button px-6 py-3 bg-primary-color text-gray-900 border border-transparent font-bold text-sm hover:bg-primary-color/90 transition-colors">
+                    <button type="submit" class="cta-button px-6 py-3 bg-primary-color text-white border border-transparent font-bold text-sm hover:bg-primary-color/90 transition-colors">
                         Submit Offer
                     </button>
                 </div>
