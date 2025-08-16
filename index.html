@@ -9,8 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Three.js Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -64,12 +62,15 @@
 
         <!-- Hero Section -->
         <header class="w-full space-y-4">
-            <!-- Canvas for the 3D diamond -->
-            <canvas id="diamondCanvas" class="w-32 h-32 mx-auto mb-4"></canvas>
-            
-            <h1 class="text-5xl sm:text-7xl font-extrabold leading-tight tracking-tight text-gray-100">
-                <span class="text-accent-gold">L</span>ast<span class="text-accent-gold">D</span>iamond.com
-            </h1>
+            <!-- 2D Logo and Title aligned side-by-side -->
+            <div class="flex items-center justify-center gap-4">
+                <!-- 2D Diamond Logo -->
+                <span class="text-5xl sm:text-7xl text-accent-gold">💎</span>
+                
+                <h1 class="text-5xl sm:text-7xl font-extrabold leading-tight tracking-tight text-gray-100">
+                    <span class="text-accent-gold">L</span>ast<span class="text-accent-gold">D</span>iamond.com
+                </h1>
+            </div>
             <h2 class="text-xl sm:text-3xl text-gray-300 font-semibold max-w-2xl mx-auto">
                 A Singular Asset. The Pinnacle of Your Portfolio.
             </h2>
@@ -228,73 +229,6 @@
 
     <script>
         window.onload = function() {
-            // Scene setup
-            const scene = new THREE.Scene();
-            scene.background = new THREE.Color(0x161b22);
-
-            // Camera setup
-            const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
-            camera.position.z = 1; // Pull the camera in to make the smaller diamond visible
-
-            // Renderer setup
-            const renderer = new THREE.WebGLRenderer({
-                canvas: document.getElementById('diamondCanvas'),
-                antialias: true,
-                alpha: true
-            });
-            renderer.setSize(400, 400); // Base size for better rendering
-            
-            // Light setup
-            const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
-            scene.add(ambientLight);
-
-            const pointLight = new THREE.PointLight(0xffffff, 1);
-            pointLight.position.set(5, 5, 5);
-            scene.add(pointLight);
-
-            // Diamond Geometry (smaller than before)
-            const geometry = new THREE.OctahedronGeometry(0.5, 0);
-
-            // Material (made more shiny)
-            const material = new THREE.MeshPhongMaterial({
-                color: 0xffffff, // White
-                shininess: 200, // Increased shininess for more specular highlights
-                specular: 0xffffff, // Pure white specular color for a brilliant shine
-                transparent: true,
-                opacity: 0.9 // Increased opacity
-            });
-
-            // Create the diamond mesh
-            const diamond = new THREE.Mesh(geometry, material);
-            scene.add(diamond);
-
-            // Animation loop
-            const animate = () => {
-                requestAnimationFrame(animate);
-
-                // Rotate the diamond
-                diamond.rotation.x += 0.008; // Slightly faster rotation
-                diamond.rotation.y += 0.008;
-
-                renderer.render(scene, camera);
-            };
-
-            // Start the animation
-            animate();
-
-            // Handle responsive resizing
-            const onResize = () => {
-                const parent = renderer.domElement.parentElement;
-                const size = Math.min(parent.offsetWidth, parent.offsetHeight, 400);
-                renderer.setSize(size, size);
-                camera.aspect = size / size;
-                camera.updateProjectionMatrix();
-            };
-
-            window.addEventListener('resize', onResize);
-            onResize(); // Initial call
-
-
             // --- Modal Logic ---
             const offerModal = document.getElementById('offerModal');
             const makeOfferBtn = document.getElementById('makeOfferBtn');
@@ -317,7 +251,6 @@
                     offerModal.classList.add('hidden');
                 }
             }
-            
 
             // Handle form submission
             offerForm.onsubmit = function(event) {
